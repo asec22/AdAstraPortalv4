@@ -1,0 +1,18 @@
+PatientID,Name,Age,Gender,Notes,Doctor
+Patient1,Emily,69,F,nan,Rolando
+Patient2,Pablo,3,M,nan,Rolando
+Patient3,Marjorie,73,F,nan,Danny
+Patient5,Tom,46,M,nan,Danny
+Patient6,Isabel,68,F,nan,Rolando
+Patient7,Rolando Sr,36,M,nan,Rolando
+Patient8,Moni,36,F,Twin,Danny
+Patient9,Jose,68,M,Hello!,Danny
+Patient10,Mark,34,M,Hello!,Brenda
+Patient11,Zoe,12,F,Friend,Brenda
+Patient12,Zachary,28,M,Friend,Rolando
+Patient13,Zoe,36,F,Twin,Rolando
+Patient14,Andrew,34,M,Brother,Danny
+Patient15,Katlynn,45,O,Friend,Danny
+Patient15,Kenzie,23,F,Niece,Admin
+Patient16,Kenzie,23,F,Niece,Admin
+Patient17,Jose,Garcia,M,,Admin

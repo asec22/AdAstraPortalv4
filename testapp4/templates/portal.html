@@ -1,0 +1,30 @@
+<!doctype html>
+<!-- index.html -->
+
+{% extends 'base.html' %}
+
+{% block nav %}          
+        <li><a href="{{ url_for('index')}}">Home</a></li>
+        <li><a href="{{ url_for('newpatient')}}">Add a Patient</a></li>
+        <li><a href="{{url_for('portal')}}">Patient Portal</a></li>
+        <li><a href="{{ url_for('logout')}}" ><button class=green>Logout</button></a><li>                
+{% endblock %}  
+
+{% block content %}
+  <h3>Patient Finder</h3>
+  <p>Please enter a patient number below.</p>
+	<p>&nbsp;</p>
+    <table>
+	<form action="{{url_for('portal')}}" method="post">
+		<div class="form-group">
+        <tr>
+            <td><label for="patientnumber">Patient Number</label></td>
+            <td><input type="text" id="patientnumber" name="pnumber" placeholder="Enter patient number."></td>
+        </tr>    
+		</div>
+        <tr>
+            <td><button class=green type="submit">Submit</button></td>
+        </tr>    
+	</form>
+        
+{% endblock %}

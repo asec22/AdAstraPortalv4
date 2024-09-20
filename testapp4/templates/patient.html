@@ -1,0 +1,41 @@
+<!doctype html>
+{% extends 'base.html' %}
+
+{% block nav %}   
+
+        <li><a href="{{ url_for('index')}}">Home</a></li>
+        <li><a href="{{ url_for('newpatient')}}">Add a Patient</a></li>
+        <li><a href="{{url_for('portal')}}">Patient Portal</a></li>
+        <li><a href="{{ url_for('logout')}}" ><button class=green>Logout</button></a><li>  
+            
+{% endblock %}  
+
+{% block content %}
+{% if not pname %}
+            <p>No patient with that identification exists. </p>
+{% else %}            
+            <div>  
+            <table width="400" border="0">
+                <tr>
+                <td colspace="2"><h3>Patient Information</h3></td>
+                <tr>
+                  <td>Name</td>
+                  <td>{{pname}}</td>
+                </tr>
+                <tr>
+                   <td>Age</td>
+                   <td>{{page}}</td>
+                </tr>
+                <tr>
+                   <td>Gender</td>
+                   <td>{{pgender}}</td>
+                </tr>  
+            </table>
+            <div>                 
+                
+    {% if npat==True %}
+                <p>{{patid}} Added!</p>
+    {% endif %}                
+
+{% endif %}                
+{% endblock %}

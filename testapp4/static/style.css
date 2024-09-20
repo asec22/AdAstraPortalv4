@@ -1,0 +1,66 @@
+body{
+    background-color:white;
+}
+
+
+h1,
+h2,
+label,
+p,
+td,
+div,
+a{
+    color:black;
+    font-family:"Verdana", sans-serif;
+}
+
+button.green{
+    background-color:#16a700;
+    color:white;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+
+div.wrapper {
+    margin: 0 auto;
+    width: 400px;
+}
+
+div.banner {
+            text-align: center;
+            padding: 20px;
+            background-color:white;
+            color: white;
+        }
+div.banner img {
+            width:200px;
+            height: auto;
+        }
+div.overlay-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+        }

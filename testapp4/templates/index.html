@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- index.html -->
+
+{% extends 'base.html' %}
+
+{% block nav %}   
+        
+        {% if session.password==pwd %}
+        {% if rl=="D" %}
+        <li><a href="{{ url_for('index')}}">Home</a></li>
+        <li><a href="{{ url_for('newpatient')}}">Add a Patient</a></li>
+        <li><a href="{{url_for('portal')}}">Patient Portal</a></li>
+        <li><a href="{{ url_for('logout')}}" ><button class=green>Logout</button></a><li>    
+        {% else %}
+        <li><a href="{{ url_for('index')}}">Home</a></li>    
+        <li><a href="#">Make an Appointment</a></li>
+        <li><a href="{{ url_for('logout')}}" ><button class=green>Logout</button></a><li>
+        {% endif %}
+        {% else %} 
+        <li><a href="{{ url_for('index')}}">Home</a></li>    
+        <li><a href="{{ url_for('login')}}" ><button class=green>Login</button></a><li>   
+        {% endif %}
+            
+{% endblock %}            
+
+{% block content %}
+
+    {% if session.password==pwd %}
+    {% if rl=='D' %}
+    <p>Welcome {{usr}}. Please Add Patient.</p>
+    {% else %}
+    <p>Welcome {{usr}}. Please Make an Appointment.</p>
+    {% endif %}
+    {% else %}
+    <p>Welcome to the Patient Portal.  Please login to add a patient data or make an appointment.</p>
+    {% endif %}
+    
+{% endblock %}
